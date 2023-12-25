@@ -1,0 +1,31 @@
+{{#if slots.length}}
+<p style="margin: 0; font-size: 14px; mso-line-height-alt: 21px">
+    <strong><span style="font-size: 14px">New Exam place(s) Exists!</span></strong>
+</p>
+<p style="margin: 0; font-size: 14px; mso-line-height-alt: 21px">
+    <span style="font-size: 14px">Whole list are
+        <a href="{{url}}" target="_blank" style="text-decoration: underline; color: #0056ad"
+            rel="noopener">Here</a>.</span>
+</p>
+<p></p>
+<p style="margin: 0; font-size: 14px; mso-line-height-alt: 21px">Vacant slots:</p>
+<ul style="line-height: 1.5; mso-line-height-alt: 21px; font-size: 14px">
+    {{#each slots}}
+    <li><strong>City:</strong> {{{this.toEmailHtmlString}}}</li>
+    {{/each}}
+</ul>
+{{else}}
+<p style="margin: 0; font-size: 14px; mso-line-height-alt: 21px">
+    <span style="font-size: 14px">No free exam slots found. Alas.</span>
+</p>
+{{/if}}
+
+{{#if extra.length}}
+<div style="font-size:1px;line-height:1px;border-top:1px dashed #b3b3b3;margin-bottom:30px;padding-left:10px;padding-right:10px;margin-top:30px"></div>
+<p style="margin: 0; font-size: 14px; mso-line-height-alt: 21px">Trace data:</p>
+<ul style="line-height: 1.5; mso-line-height-alt: 21px; font-size: 14px">
+    {{#each extra}}
+    <li>{{{this}}}</li>
+    {{/each}}
+</ul>
+{{/if}}

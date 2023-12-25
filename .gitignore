@@ -1,0 +1,7 @@
+.vscode/
+vendor/
+node_modules/
+package-lock.json
+cookie.json
+*.log
+a2-test.ts

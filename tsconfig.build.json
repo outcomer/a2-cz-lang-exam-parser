@@ -1,0 +1,14 @@
+{
+	"extends": "./tsconfig.json",
+	"compilerOptions": {
+		"outDir": "./dist",
+		"declaration": true,
+		"sourceMap": false,
+		"declarationMap": false,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+	},
+	"exclude": [
+		"./a2-test.ts"
+	]
+}
